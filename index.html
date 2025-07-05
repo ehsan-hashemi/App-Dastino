@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fa" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,6 +9,60 @@
     <title>داستینو</title>
 </head>
 <body>
-    <div class="iconh1d"><img class="iconh1" src="/icon.png" alt="لوگو داستینو"></div>
+    <header>
+        <h1 class="iconh1d"><img class="iconh1" src="/icon.png" alt="لوگو داستینو"></h1>
+        <div class="srd"><input id="search" type="text" placeholder="جستجو" autocomplete="off"></div>
+    </header>
+    <br>
+    <h2 class="h2scards">پیشنهادی</h2>
+    <br>
+    <h3 class="cardsne"><a class="cardsa" href="/dastanz/سلمان کر و شعبان کر - 0001/">سلمان کر و شعبان کر</a></h3>
+    <p class="cardsinfo">کد: ۰۰۰۱ - نوع: حکایت، طنز</p>
+    <br>
+    <hr class="hrcards">
+    <br>
+    <h3 class="cardsne"><a class="cardsa" href="/dastanz/ملانصرالدین و دانشمند - 0002/">ملانصرالدین و دانشمند</a></h3>
+    <p class="cardsinfo">کد: ۰۰۰۲ - نوع: حکایت، طنز</p>
+    <br>
+    <hr class="hrcards">
+    <br>
+    <h3 class="cardsne"><a class="cardsa" href="/dastanz/ملانصرالدین و دانشمند - 0002/">ملانصرالدین و دانشمند</a></h3>
+    <p class="cardsinfo">کد: ۰۰۰۳ - نوع: حکایت، طنز</p>
+    <br>
+    <hr class="hrcards">
+    <br>
+    <h3 class="cardsne"><a class="cardsa" href="/dastanz/ملانصرالدین و دانشمند - 0002/">ملانصرالدین و دانشمند</a></h3>
+    <p class="cardsinfo">کد: ۰۰۰۲ - نوع: حکایت، طنز</p>
+    <br>
+    <hr class="hrcards">
+    <br>
+    <h3 class="cardsne"><a class="cardsa" href="/dastanz/ملانصرالدین و دانشمند - 0002/">ملانصرالدین و دانشمند</a></h3>
+    <p class="cardsinfo">کد: ۰۰۰۲ - نوع: حکایت، طنز</p>
+    <br>
+    <hr class="hrcards">
+    <br>
+    <h3 class="cardsne"><a class="cardsa" href="/dastanz/ملانصرالدین و دانشمند - 0002/">ملانصرالدین و دانشمند</a></h3>
+    <p class="cardsinfo">کد: ۰۰۰۲ - نوع: حکایت، طنز</p>
+
+    <br>
+
+    <footer class="footer">
+      <div class="footer-content">
+        <p style="direction: ltr">
+          © <span id="year">2025</span> dastino App - All rights reserved.
+          <a href="https://ehsan-hashemi.ir" target="_blank">Ehsan Group</a>
+        </p>
+      </div>
+    </footer>
 </body>
+<script>
+    $(window).scroll(function() {
+        if ($(this).scrollTop() > 1){ 
+            $('header').addClass("sticky");
+        }
+        else{
+            $('header').removeClass("sticky");
+        }
+    });
+</script>
 </html>
