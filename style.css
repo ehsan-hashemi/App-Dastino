@@ -90,7 +90,7 @@ h2 {
 }
 
 #search {
-  display: none;
+  display: black;
   position: fixed;
   top: 40px;
   right: 250px;
