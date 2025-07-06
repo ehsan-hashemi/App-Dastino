@@ -1,0 +1,18 @@
+.aboutdastanh2 {
+    text-align: center;
+}
+
+.paragraph {
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.das {
+    z-index: -10;
+}
+
+.padp {
+    color: red;
+    font-size: small;
+    text-align: center;
+}
