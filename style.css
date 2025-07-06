@@ -100,7 +100,7 @@ h2 {
 
 .searchbuttond {
     text-align: left;
-    margin-top: 12px;
+    margin-top: 15px;
     margin-left: 100px;
     z-index: 20px;
 }
@@ -119,6 +119,7 @@ h2 {
 #search {
   display: black;
   position: absolute;
+  height: 30px;
   top: 120px;
   right: 90px;
   width: 800px;
@@ -178,6 +179,88 @@ html, body {
 
 
 @media (max-width: 767px) {
+  .iconsearchd {
+  width: 240px; /* قبلاً 200px بود */
+  max-width: 100%;
+  height: auto;
+  text-align: center;
+}
+
+.search-bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  gap: 10px;
+}
+
+#search {
+  width: 70%;
+  height: 40px;
+  font-size: 16px;
+  padding: 8px 12px;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+  font-family: "Vazir";
+}
+
+.searchbutton {
+  width: 45px;
+  height: 40px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+  .searchbuttond {
+    margin-left: 0;
+    text-align: center;
+  }
+
+  .searchbutton {
+    width: 50px;
+    height: 40px;
+    font-size: 20px;
+  }
+
+  .search-controls {
+    text-align: center;
+    margin: 10px auto;
+  }
+
+  select#resultLimit {
+    width: 90%;
+    font-size: 16px;
+  }
+
+  #resultLimit {
+  width: auto;
+  min-width: 120px;
+  font-size: 16px;
+  font-family: "Vazir";
+  padding: 6px 12px;
+  border-radius: 8px;
+  border: 1px solid #aaa;
+  text-align: center;
+}
+
+
+
+  .footer {
+    font-size: 0.85rem;
+    padding: 0.8em 0;
+  }
+
+  .cardsne, .cardsinfo {
+    text-align: right;
+    padding-right: 15px;
+  }
+  .iconsearchd {
+    width: 100px;
+  }
+  .idvjdf {
+    text-align: center;
+  }
   .iconh1d {
     text-align: right;
     margin-right: 0px;
