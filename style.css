@@ -135,12 +135,12 @@ h2 {
 
 @media (max-width: 767px) {
   #search {
-    position: static;
+    /*position: static;
     width: 500px;
     text-indent: 10px;
     margin-right: 10px;
     margin-left: 10px;
-    background-color: white;
+    background-color: white;*/
     display: none;
   }
 
