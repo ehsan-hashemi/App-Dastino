@@ -3,8 +3,8 @@
 }
 
 .paragraph {
-    margin-right: 10px;
-    margin-left: 10px;
+    margin-right: 5px;
+    margin-left: 5px;
 }
 
 .das {
@@ -18,7 +18,7 @@
 }
 
 @media (max-width: 767px) {
-    .aboutdastanh2 {
-        margin-top: 100px;
-    }
+  .aboutdastanh2 {
+    margin-top: 100px;
+  }
 }
