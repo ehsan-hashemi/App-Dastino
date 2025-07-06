@@ -26,9 +26,6 @@ header{
  height: 108px;
  color: #fff;
  box-shadow: #555;
- margin: 0;
-  padding: 0;
-  outline: 0;
 }
 
 header.sticky {
@@ -38,26 +35,22 @@ header.sticky {
  background: #efc47D;
  text-align: left;
  padding-left: 20px;
- margin: 0;
-  padding: 0;
-  outline: 0;
+}
+
+.srd {
+    text-align: left;
+    margin-left: 30px;
 }
 
 .iconh1d {
     text-align: right;
     margin-right: 20px;
-    margin-bottom: 0;
-    margin-left: 0;
-    margin-top: 0;
-  padding: 0;
-  outline: 0;
+    margin-bottom: -125px;
+    margin-top: 5px;
 }
 
 .iconh1 {
     width: 200px;
-    margin: 0;
-  padding: 0;
-  outline: 0;
 }
 
 .h2scards {
@@ -89,11 +82,34 @@ h2 {
     color: black;
 }
 
+.iconsearchd {
+    width: 200px;
+    text-align: center;
+}
+
+.idvjdf {
+    text-align: center;
+}
+
+.searchbutton {
+    width: 45px;
+    right: 20px;
+    font-family: "Vazir";
+    background-color: none;
+}
+
+.searchbuttond {
+    text-align: left;
+    margin-top: 12px;
+    margin-left: 110px;
+    z-index: 20px;
+}
+
 #search {
   display: black;
   position: fixed;
-  top: 40px;
-  right: 250px;
+  top: 120px;
+  right: 90px;
   width: 800px;
   -webkit-transition: width ease 0.2s, opacity ease 0.4s;
   -moz-transition: width ease 0.2s, opacity ease 0.4s;
@@ -112,6 +128,7 @@ h2 {
   opacity: 0.7;
   color: black;
   background-color: white;
+  font-family: "Vazir";
 }
 
 .footer {
@@ -134,22 +151,8 @@ h2 {
 }
 
 @media (max-width: 767px) {
-  #search {
-    /*position: static;
-    width: 500px;
-    text-indent: 10px;
-    margin-right: 10px;
-    margin-left: 10px;
-    background-color: white;*/
-    display: none;
-  }
-
-  .srd {
-    display: none;
-  }
-
   .iconh1d {
-    text-align: center;
+    text-align: right;
     margin-right: 0px;
     margin-top: 10px;
   }
@@ -160,5 +163,9 @@ h2 {
 
   h2 {
     margin-top: 150px;
+  }
+
+  .srd {
+    margin-left: 20px;
   }
 }

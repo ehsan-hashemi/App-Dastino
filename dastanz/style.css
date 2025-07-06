@@ -21,6 +21,10 @@ audio {
   color: white;
 }
 
+.copyrabout {
+    color: blue;
+}
+
 /* استایل برای دکمه‌ها */
 audio::-webkit-media-controls-panel {
   background-color: white; /* رنگ پس‌زمینه */
