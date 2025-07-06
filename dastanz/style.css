@@ -23,6 +23,8 @@ audio {
 
 .copyrabout {
     color: blue;
+    text-align: right;
+    margin-right: 10px;
 }
 
 /* استایل برای دکمه‌ها */
