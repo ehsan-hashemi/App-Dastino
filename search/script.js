@@ -11,31 +11,58 @@ const stories = [
     type: "حکایت، طنز",
     url: "/dastanz/ملانصرالدین و دانشمند - 0002/"
   }
-  // هر داستان جدید رو اینجا اضافه کن
+  // داستان‌های بیشتر رو اینجا اضافه کن
 ];
 
 function normalize(text) {
-  return text.replace(/\s/g, "").split("").join("+");
+  return text
+    .replace(/\s/g, "")
+    .replace(/[۰-۹]/g, d => String.fromCharCode(d.charCodeAt(0) - 1728))
+    .toLowerCase();
 }
 
 function searchStories(query) {
-  const queryLetters = normalize(query);
+  const resultContainer = document.getElementById("results");
+
+  if (!query.trim()) {
+    resultContainer.innerHTML = "<p style='text-align:right; margin-right:10px;'>لطفاً عبارتی برای جستجو وارد کنید.</p>";
+    return;
+  }
+
+  const resultLimit = parseInt(document.getElementById("resultLimit").value);
+  const normQuery = normalize(query);
   const scores = stories.map(story => {
-    const titleLetters = normalize(story.title);
-    let match = 0;
-    queryLetters.split("+").forEach(letter => {
-      if (titleLetters.includes(letter)) match++;
+    const normTitle = normalize(story.title);
+    let matchScore = 0;
+
+    if (normTitle.includes(normQuery)) {
+      matchScore += normQuery.length * 2;
+    }
+
+    normQuery.split("").forEach(char => {
+      if (normTitle.includes(char)) matchScore++;
     });
-    return { story, match };
+
+    return { story, matchScore };
   });
 
-  // مرتب‌سازی بر اساس تعداد حروف مشترک
-  scores.sort((a, b) => b.match - a.match);
+  const filteredScores = scores
+    .filter(item => item.matchScore > 0)
+    .sort((a, b) => b.matchScore - a.matchScore)
+    .slice(0, resultLimit);
 
-  const resultContainer = document.getElementById("results");
-  resultContainer.innerHTML = "";
+  resultContainer.innerHTML = `
+    <p style="text-align: right; margin-right: 10px; font-size: x-large;">
+      نتایج برای "<strong>${query}</strong>":
+    </p>
+  `;
 
-  scores.forEach(({ story }) => {
+  if (filteredScores.length === 0) {
+    resultContainer.innerHTML += "<p style='text-align:right; margin-right:10px;'>نتیجه‌ای یافت نشد. لطفاً عبارت دقیق‌تری وارد کنید.</p>";
+    return;
+  }
+
+  filteredScores.forEach(({ story }) => {
     resultContainer.innerHTML += `
       <h3 class="cardsne">
         <a class="cardsa" href="${story.url}">${story.title}</a>
@@ -46,8 +73,18 @@ function searchStories(query) {
   });
 }
 
+// جستجو با کلیک دکمه
 document.querySelector(".searchbutton").addEventListener("click", e => {
   e.preventDefault();
   const query = document.getElementById("search").value;
   searchStories(query);
+});
+
+// جستجو با کلید Enter
+document.getElementById("search").addEventListener("keydown", function(e) {
+  if (e.key === "Enter") {
+    e.preventDefault();
+    const query = this.value;
+    searchStories(query);
+  }
 });

@@ -101,13 +101,13 @@ h2 {
 .searchbuttond {
     text-align: left;
     margin-top: 12px;
-    margin-left: 110px;
+    margin-left: 100px;
     z-index: 20px;
 }
 
 #search {
   display: black;
-  position: fixed;
+  position: absolute;
   top: 120px;
   right: 90px;
   width: 800px;
@@ -124,10 +124,7 @@ h2 {
   border: none;
   background: transparent;
   margin-bottom: 0;
-  outline: none;
-  opacity: 0.7;
   color: black;
-  background-color: white;
   font-family: "Vazir";
 }
 
