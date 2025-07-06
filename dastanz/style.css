@@ -17,6 +17,15 @@
     text-align: center;
 }
 
+audio {
+  color: white;
+}
+
+/* استایل برای دکمه‌ها */
+audio::-webkit-media-controls-panel {
+  background-color: white; /* رنگ پس‌زمینه */
+}
+
 @media (max-width: 767px) {
   .aboutdastanh2 {
     margin-top: 100px;
