@@ -105,6 +105,17 @@ h2 {
     z-index: 20px;
 }
 
+.ah1ic {
+  display: inline-block; /* یا block اگر بخوای کل عرض بگیره */
+  width: fit-content;    /* یا همون اندازه تصویر */
+  height: auto;
+}
+
+.ah1ic img {
+  display: block;
+  height: auto;
+}
+
 #search {
   display: black;
   position: absolute;
