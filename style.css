@@ -175,6 +175,17 @@ html, body {
 
 
 @media (max-width: 767px) {
+    #search {
+        width: 370px;
+        height: 25px;
+        right: 25px;
+    }
+
+    .searchbuttond {
+        margin-left: 15px;
+        margin-top: 13px;
+    }
+
   .iconh1d {
     text-align: right;
     margin-right: 0px;
