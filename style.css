@@ -176,7 +176,7 @@ html, body {
 
 @media (max-width: 767px) {
     #search {
-        width: 370px;
+        width: 250px;
         height: 25px;
         right: 25px;
     }
